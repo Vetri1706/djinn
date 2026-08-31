@@ -6,6 +6,7 @@ A polished, privacy-friendly quest board for turning open-source goals into ship
 
 - Six achievement quest cards with honest completion guidance
 - Progress saved locally in the browser
+- One-click, plain-text progress sharing
 - Responsive, accessible interface
 - Zero dependencies and no tracking
 
