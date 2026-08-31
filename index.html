@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A privacy-friendly GitHub achievement planner that runs entirely in your browser." />
+  <title>Djinn — Open-source Quest Board</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Djinn · open-source quest board</p>
+      <h1>Wish it.<br /><span>Ship it.</span></h1>
+      <p class="lede">A tiny, dependency-free planner for GitHub achievements—focused on genuine collaboration, not spam.</p>
+    </header>
+
+    <section class="stats" aria-label="Quest progress">
+      <div><strong id="doneCount">0</strong><span>completed</span></div>
+      <div><strong id="progressPercent">0%</strong><span>quest progress</span></div>
+      <button id="resetButton" type="button">Reset quest</button>
+    </section>
+
+    <section id="questGrid" class="grid" aria-label="Achievement quests"></section>
+
+    <footer>
+      <p>Your progress stays in this browser. Built with plain HTML, CSS, and JavaScript.</p>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
