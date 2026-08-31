@@ -39,4 +39,16 @@ document.querySelector('#resetButton').addEventListener('click', () => {
   render();
 });
 
+document.querySelector('#copyButton').addEventListener('click', async event => {
+  const completed = quests.filter(({ id }) => saved.has(id)).map(({ name }) => name);
+  const summary = completed.length
+    ? `Djinn quest progress: ${completed.length}/${quests.length} complete — ${completed.join(', ')}.`
+    : `Djinn quest progress: 0/${quests.length} complete. The first quest starts now.`;
+
+  await navigator.clipboard.writeText(summary);
+  const button = event.currentTarget;
+  button.textContent = 'Copied!';
+  setTimeout(() => { button.textContent = 'Copy progress'; }, 1400);
+});
+
 render();
